@@ -1,4 +1,4 @@
-/// <binding BeforeBuild='clean, clean-ts, copy-html' AfterBuild='copy, compile-ts' />
+/// <binding BeforeBuild='clean, clean-ts, copy-html, copy-css' AfterBuild='copy, compile-ts' />
 /*
 This file in the main entry point for defining Gulp tasks and using Gulp plugins.
 Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
@@ -127,4 +127,20 @@ gulp.task('build-html', function () {
             return file.contents.toString('utf8')
         }
     })).pipe(gulp.dest(config.tsOutputPath));
+});
+
+
+gulp.task('copy-css', function () {
+
+    gulp.src(config.allCss)
+        .pipe(rename(function (path) {
+            path.dirname = path.dirname.replace("Components", "")
+        }))
+        .pipe(gulp.dest(
+        function (file) {
+            // var filePath = file.path;
+
+            return config.allCssOutput;//  + filePath;
+        }));
+
 });

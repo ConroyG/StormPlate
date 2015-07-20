@@ -18,6 +18,9 @@ var GulpConfig = (function () {
         this.allHtml = this.sourceApp + '/**/*.html';
         this.allHtmlOutput = this.source + '/wwwroot/html';
         this.htmlCacheFile = this.tsOutputPath + '/test.js';
+
+        this.allCss = this.sourceApp + '/**/*.css';
+        this.allCssOutput = this.source + '/wwwroot/css';
     }
     return GulpConfig;
 })();
