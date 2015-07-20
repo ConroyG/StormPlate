@@ -96,6 +96,7 @@ gulp.task('clean-ts', function (cb) {
 
 gulp.task('watch', function () {
     gulp.watch([config.allTypeScript], ['compile-ts', 'gen-ts-refs']);
+    gulp.watch([config.allHtml], ['compile-ts', 'copy-html']);
 });
 
 

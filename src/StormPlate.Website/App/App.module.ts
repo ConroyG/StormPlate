@@ -10,9 +10,10 @@
             $locationProvider: ng.ILocationProvider) {
 
             $stateProvider
-                .state('Blank',
+                .state('App',
                 {
-                    url: '/',
+                    abstract: true,
+                    url: '',
                     views: {
                         'sidebar': {
                             templateUrl: 'html/Shared/SideBar/SideBar.html',
@@ -24,12 +25,33 @@
                         }
                     }
                 })
+                .state('dashboard',
+                {
+                    parent: 'App',
+                    url: '/',
+                    views: {
+                        //@ says to targte parent view
+                        'content@': {
+                            templateUrl: 'html/Dashboard/dashboard.html'
+                        }
+                    }
+                })
+                .state('blank',
+                {
+                    parent: 'App',
+                    url: '/blank',
+                    views: {
+                        'content@': {
+                            templateUrl: 'html/Blank/Blank.html'
+                        }
+                    }
+                })
             ;
 
 
             $urlRouterProvider.otherwise('/');
 
-            $locationProvider.html5Mode(true);
+           // $locationProvider.html5Mode(true);
         }
     }
 }
@@ -41,5 +63,5 @@
 
     var app = angular.module("App", modules);
     app.config(App.Routes.configureRoutes);
-   // app.run(App.Start.run);
+    // app.run(App.Start.run);
 })();
