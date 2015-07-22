@@ -1,7 +1,3 @@
 ﻿{
-	"Data": {
-		"DefaultConnection": {
-			"ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=_CHANGE_ME;Trusted_Connection=True;"
-		}
-	}
+    "StormPlateDatabaseConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=StormPlateDatabase;Trusted_Connection=True;"
 }

@@ -26,6 +26,10 @@ namespace StormPlate.DependencyInjection
             //startups.Add(new ServicesStartup(configuration));
             //startups = loadFromAllAssembles();
             startups = hardcodedStartups();
+            foreach (var item in startups)
+            {
+                item.Configuration = configuration;
+            }
         }
 
         private IEnumerable<IStartup> hardcodedStartups()

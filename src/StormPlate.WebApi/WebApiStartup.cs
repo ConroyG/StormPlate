@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
+using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 using StormPlate.Core;
 //using Swashbuckle.Swagger;
@@ -11,6 +12,12 @@ namespace StormPlate.WebApi
 {
     public class WebApiStartup : IStartup
     {
+        public IConfiguration Configuration
+        {
+            get;
+            set;
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddSwagger(c =>

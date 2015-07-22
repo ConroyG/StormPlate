@@ -8,11 +8,12 @@
 
     "dependencies": {
         "Microsoft.Framework.DependencyInjection.Abstractions": "1.0.0-beta5",
-        "Microsoft.AspNet.Http.Abstractions": "1.0.0-beta5"
+        "Microsoft.AspNet.Http.Abstractions": "1.0.0-beta5",
+        "Microsoft.Framework.Configuration.Abstractions": "1.0.0-beta5"
     },
 
     "frameworks": {
         "dnx451": { }
-        
+
     }
 }
