@@ -8,6 +8,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9765C506-1F42-4326-A5E2-C8D34D860618}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		ProjectRename.ps1 = ProjectRename.ps1
+		Run Project Rename.cmd = Run Project Rename.cmd
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "StormPlate.Website", "src\StormPlate.Website\StormPlate.Website.xproj", "{7670BB63-6E80-4015-9FA4-A20711BD1B28}"
